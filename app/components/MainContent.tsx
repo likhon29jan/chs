@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function MainContent() {
   const sideMenuItems = [
@@ -25,61 +26,61 @@ export default function MainContent() {
   ];
 
   const homeMenuItems = [
-    { label: 'উপস্থিতি', href: '#', icon: '📈' },
-    { label: 'একাডেমিক ক্যালেন্ডার', href: '#', icon: '📅' },
-    { label: 'পাঠ পরিকল্পনা', href: '#', icon: '📚' },
-    { label: 'ফলাফল', href: '#', icon: '📄' },
+    { label: 'আমাদের বিষয়', href: '/about', icon: '📖' },
+    { label: 'একাডেমিক রেকর্ড', href: '/academic-records', icon: '📈' },
+    { label: 'কার্যাবলী', href: '/activities', icon: '🎯' },
+    { label: 'ফলাফল', href: '/results', icon: '📄' },
   ];
 
   return (
-    <section className="body-section py-8">
+    <section className="body-section py-6 md:py-8">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-12 gap-6">
-          <div className="md:col-span-4">
-            <div className="side-menu space-y-4">
+        <div className="grid lg:grid-cols-12 gap-6">
+          <div className="lg:col-span-4 space-y-4">
+            <div className="side-menu grid grid-cols-2 gap-3 md:gap-4">
               {sideMenuItems.map((item, index) => (
                 <a
                   key={index}
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="service block"
+                  className="service block col-span-1"
                 >
-                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all p-4 rounded-lg shadow-md text-white flex items-center gap-3">
-                    <span className="text-2xl">{item.icon}</span>
-                    <span className="font-semibold">{item.label}</span>
+                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all p-3 md:p-4 rounded-lg shadow-md text-white text-center h-full flex flex-col items-center justify-center gap-2">
+                    <span className="text-2xl md:text-3xl">{item.icon}</span>
+                    <span className="font-semibold text-xs md:text-sm">{item.label}</span>
                   </div>
                 </a>
               ))}
-              <div className="mt-6">
-                <Image
-                  src="/hotline.png"
-                  alt="Hotline"
-                  width={300}
-                  height={600}
-                  className="w-full rounded-lg shadow-md"
-                />
-              </div>
+            </div>
+            <div className="hidden lg:block">
+              <Image
+                src="/hotline.png"
+                alt="Hotline"
+                width={300}
+                height={600}
+                className="w-full rounded-lg shadow-md"
+              />
             </div>
           </div>
           
-          <div className="md:col-span-8">
-            <div className="home-menu-section grid grid-cols-2 gap-4 mb-6">
+          <div className="lg:col-span-8 space-y-6">
+            <div className="home-menu-section grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {homeMenuItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
                   href={item.href}
                   className="home-menu block"
                 >
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transition-all p-6 rounded-lg shadow-md text-white text-center">
-                    <div className="text-3xl mb-2">{item.icon}</div>
-                    <span className="font-semibold text-lg">{item.label}</span>
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transition-all p-4 md:p-6 rounded-lg shadow-md text-white text-center h-full flex flex-col items-center justify-center gap-2">
+                    <div className="text-2xl md:text-3xl">{item.icon}</div>
+                    <span className="font-semibold text-xs md:text-sm lg:text-base">{item.label}</span>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
             
-            <div className="school-photo mt-6">
+            <div className="school-photo">
               <Image
                 src="/school-photo.jpg"
                 alt="Chalishia High School"
@@ -87,6 +88,17 @@ export default function MainContent() {
                 height={600}
                 className="w-full rounded-lg shadow-lg"
               />
+            </div>
+
+            <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 md:p-6 rounded-lg border-l-4 border-green-500">
+              <h2 className="text-lg md:text-xl font-bold text-green-800 mb-3">
+                <i className="fa fa-info-circle mr-2" />
+                বিদ্যালয় সম্পর্কে
+              </h2>
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                চলিশীয়া উচ্চ বিদ্যালয় যশোর জেলার অভয়নগর উপজেলায় অবস্থিত একটি বেসরকারি মাধ্যমিক বিদ্যালয়। 
+                EIIN: 115498। প্রধান শিক্ষক: মোস্তাক আহম্মেদ। যোগাযোগ: ০১৭১৪৯৬০৭৯৭
+              </p>
             </div>
           </div>
         </div>

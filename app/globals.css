@@ -10,17 +10,11 @@
   --color-foreground: var(--foreground);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #f9fafb;
-    --foreground: #171717;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-noto-sans-bengali), Arial, sans-serif;
+  font-family: 'Adorsho Lipi', Arial, sans-serif;
+  font-weight: 400;
 }
 
 @keyframes marquee {
@@ -34,7 +28,7 @@ body {
 
 .animate-marquee {
   display: inline-block;
-  animation: marquee 20s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 
 .animate-marquee:hover {
