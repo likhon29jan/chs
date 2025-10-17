@@ -82,13 +82,11 @@ export default function Header() {
             </div>
             <div className="admin">
               <a 
-                href="//institute.jessoreboard.gov.bd" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="/login"
                 className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
               >
                 <i className="fa fa-user" aria-hidden="true"></i> 
-                <span className="hidden sm:inline">Admin Login</span>
+                <span className="hidden sm:inline">Institute Login</span>
               </a>
             </div>
           </div>

@@ -1,20 +1,23 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  :root {
+    --background: #f3f7f0;
+    --foreground: #151b13;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Adorsho Lipi', Arial, sans-serif;
-  font-weight: 400;
+  body {
+    margin: 0;
+    background-color: var(--background);
+    background-image: url('/bg_main.gif');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    color: var(--foreground);
+    font-family: 'SolaimanLipi', 'Solaiman Lipi', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+  }
 }
 
 @keyframes marquee {
@@ -26,11 +29,13 @@ body {
   }
 }
 
-.animate-marquee {
-  display: inline-block;
-  animation: marquee 25s linear infinite;
-}
+@layer utilities {
+  .animate-marquee {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+  }
 
-.animate-marquee:hover {
-  animation-play-state: paused;
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
 }
