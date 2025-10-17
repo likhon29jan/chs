@@ -38,10 +38,10 @@ export default function Header() {
   return (
     <>
       <section className="banner-section bg-gradient-to-br from-green-600 to-green-700 py-6 md:py-8 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <Image 
-            src="/bg_main.gif" 
-            alt="" 
+        <div className="absolute inset-0 opacity-20">
+          <Image
+            src="/banner-bg.jpeg"
+            alt=""
             fill
             style={{ objectFit: 'cover' }}
             priority

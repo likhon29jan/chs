@@ -9,10 +9,11 @@
   body {
     margin: 0;
     background-color: var(--background);
-    background-image: url('/bg_main.gif');
-    background-repeat: repeat;
+    background-image: linear-gradient(rgba(12, 83, 45, 0.15), rgba(12, 83, 45, 0.15)), url('/banner-bg.jpeg');
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: auto;
+    background-size: cover;
+    background-position: center;
     color: var(--foreground);
     font-family: 'SolaimanLipi', 'Solaiman Lipi', sans-serif;
     font-weight: 400;

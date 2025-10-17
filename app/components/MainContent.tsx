@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import TelegramWidget from './TelegramWidget';
+
 const sideMenuItems = [
   { label: 'HSC Result-2025', href: '/hsc-result-2025', icon: '📊' },
   { label: 'Student Management', href: '/student-management', icon: '👨‍🎓' },
@@ -42,6 +44,8 @@ export default function MainContent() {
                 className="w-full rounded-lg shadow-md"
               />
             </div>
+
+            <TelegramWidget />
           </div>
 
           <div className="space-y-6 lg:col-span-8">
