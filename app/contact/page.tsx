@@ -74,16 +74,16 @@ export default function ContactPage() {
 
         <div className="rounded-2xl bg-white p-6 shadow-lg">
           <h2 className="mb-6 text-2xl font-bold text-green-700">বিদ্যালয়ের অবস্থান</h2>
-          <div className="h-96 min-h-[400px] w-full md:h-full">
+          <div className="h-96 min-h-[400px] w-full overflow-hidden rounded-xl border border-green-100 md:h-full">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!4v1760664293435!6m8!1m7!1sVCknVdOV3pHWlfJnu49myA!2m2!1d23.00819631855351!2d89.38639562511186!3f138.72357!4f0!5f0.7820865974627469"
+              src="https://maps.google.com/maps?q=23.0128,89.3872&z=15&hl=bn&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-lg"
+              title="চলিশীয়া উচ্চ বিদ্যালয়ের মানচিত্র"
             />
           </div>
         </div>
